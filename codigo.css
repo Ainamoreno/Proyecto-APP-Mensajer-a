@@ -38,3 +38,15 @@ body {
         margin-left: 0;
     }
 }
+#btn {
+    margin-top: 0.5em;
+}
+
+#btn-sec {
+    margin-top: 0.5em;
+    margin-left: 0.7em;
+}
+
+.contenido {
+    display: none;
+}
