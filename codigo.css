@@ -1,6 +1,7 @@
 body {
     background: #eee;
 }
+
 #side_nav {
     background: #000;
     min-width: 250px;
@@ -10,7 +11,7 @@ body {
 
 .content {
     min-height: 100vh;
-    width:100%
+    width: 100%
 }
 
 .sidebar li.active {
@@ -18,7 +19,8 @@ body {
     border-radius: 6px;
 }
 
-.sidebar li.active a, .sidebar li.active a:hover {
+.sidebar li.active a,
+.sidebar li.active a:hover {
     color: #000;
 }
 
@@ -26,18 +28,20 @@ body {
     color: #fff;
 }
 
-@media(max-width:767px){
+@media(max-width:767px) {
     #side_nav {
         margin-left: -250px;
         position: fixed;
         min-height: 100vh;
-        z-index: 1; 
+        z-index: 1;
 
     }
+
     #side_nav.active {
         margin-left: 0;
     }
 }
+
 #btn {
     margin-top: 0.5em;
 }
@@ -47,6 +51,50 @@ body {
     margin-left: 0.7em;
 }
 
-.contenido {
+.contenedor-menus {
     display: none;
+    text-align: center;
+
+}
+
+.btn-añadir-canal {
+    margin-left: 4em;
+}
+.btn-input-mensajes {
+    width: 2em;
+    height: 2em;
+    position: relative;
+    bottom: -24em;
+}
+
+
+.input-mensajes {
+    width: 65em;
+    height: 2em;
+    position: relative;
+    bottom: -24em;
+}
+
+::placeholder {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 300;
+}
+
+.fecha {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.384);
+}
+
+.contenedor-menus .bloque-mensaje {
+    text-align: initial;
+    padding: 0.2em;
+    border-radius: 0.7em;
+    position: absolute;
+}
+.nombre-mensaje {
+    font-weight: 16px !important;
+}
+
+.jesus {
+    background-color: rgba(128, 226, 63, 0.39);
 }
