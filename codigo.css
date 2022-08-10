@@ -79,7 +79,6 @@ body {
 }
 
 .contenedor-menus {
-    display: none;
     text-align: center;
 
 }
@@ -133,4 +132,13 @@ body {
     width: fit-content;
     padding: 1em;
     border-radius: 1em;
+}
+
+.titulo-canal {
+    text-align: center;
+}
+
+.titulo-creacion-canal {
+    text-align: center;
+   
 }
