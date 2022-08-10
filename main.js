@@ -1,6 +1,13 @@
 const contenidoMensaje = document.getElementById('contenido-mensaje');
 const bloquesMensajes = document.getElementById('bloques-mensajes');
 
+const bloqueCanal = document.getElementById('creacion-canal');
+const contenidoMensajeCanalNuevo = document.getElementById('contenido-mensaje-canal');
+
+const bloqueFormularioCanal = document.getElementById('formulario-canal');
+const nombreNuevoCanal = document.getElementById('nombre-nuevo-canal');
+const descripcionNuevoCanal = document.getElementById('descrip-nuevo-canal');
+
 salidaMensaje = (contenido, bloque) => {
     let mensaje = contenido.value;
     let estructuraMensaje = '';
