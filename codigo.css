@@ -113,3 +113,24 @@ body {
     background-color: rgba(128, 226, 63, 0.39);
 }
 
+.crear-canal {
+    display: none;
+}
+.formulario-canal {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-canal .label-crear-canal {
+    margin-left: 1.5em;
+}
+
+.formulario-canal .titulo-formulario-canal {
+    margin-left: 1.5em;
+    background-color: rgb(0, 0, 0);
+    color: #eee;
+    font-weight: 16px;
+    width: fit-content;
+    padding: 1em;
+    border-radius: 1em;
+}
