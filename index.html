@@ -65,7 +65,34 @@
                     </div>
                 </div>
             </nav>
-           
+            <div id="crear-canal" class="crear-canal">
+                <div id="formulario-canal" class="formulario-canal">
+                    <span class="titulo-formulario-canal">CREACIÓN DE UN NUEVO CANAL</span>
+                    <label class="label-crear-canal">Nombre del canal: </label>
+                    <input id="nombre-nuevo-canal" type="text">
+                    <label class="label-crear-canal">Descripción del canal:</label>
+                    <input placeholder="Opcional" id="descrip-nuevo-canal" type="text">
+                    <br>
+                    <button class="input-group-text btn btn-dark" type="button" onclick="crearCanal()">CREAR CANAL
+                    </button>
+                </div>
+
+                <div id="creacion-canal"> 
+                   <div> 
+                    <nav class="input-mensajes">
+                        <form class="">
+                            <div class="input-group">
+                                <input type="text" id="contenido-mensaje-canal" class="form-control contenido-mensaje-canal"
+                                            placeholder="    Escriba su mensaje aquí" value="hola" >
+                                <button id="btn-enviar-mensaje" class="btn-enviar-mensaje input-group-text btn btn-dark"
+                                            type="button" onclick="salidaMensaje(contenidoMensajeCanalNuevo, bloqueCanal)"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                     </nav>
+                   </div> 
+                </div>
+            </div>
+            
             <div class="contenedor-menus px-3 pt-4" id="contenido-grupo1">
                 <h2 class="fs-5">Grupo de clase B2</h2>
                 <time class="fecha" datetime="2022-08-08"> Lunes 08 de agosto, 2022 </time>
