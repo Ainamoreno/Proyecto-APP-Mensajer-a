@@ -1,19 +1,20 @@
 const contenidoMensaje = document.getElementById('contenido-mensaje');
 const bloquesMensajes = document.getElementById('bloques-mensajes');
 
-salidaMensaje = () => {
-    let mensaje = contenidoMensaje.value;
-    let estructura = '';
+salidaMensaje = (contenido, bloque) => {
+    let mensaje = contenido.value;
+    let estructuraMensaje = '';
+    alert(mensaje)
     let date = new Date();
     let hora = `${date.getHours()}:${date.getMinutes()}`;
-    estructura +=
+    estructuraMensaje +=
         `<div class="bloque-mensaje-mio">
                 <label class="nombre-mensaje">Yo:</label>
                 <br>
-                <span class="mensaje">${mensaje }<time datetime="${ hora}" class="fecha">${ hora} </time></span>
+                <span class="mensaje"> ${mensaje }<time datetime="${ hora}" class="fecha">${ hora} </time></span>
         </div>`
 
-    bloquesMensajes.innerHTML += estructura;
-    contenidoMensaje.value = '';
+    bloque.innerHTML += estructuraMensaje;
+    contenido.value = '';
 }
 

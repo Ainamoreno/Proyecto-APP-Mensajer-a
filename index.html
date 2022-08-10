@@ -21,23 +21,25 @@
             </div>
 
             <button type="button" name="" id="btn" class="btn btn-dark"><i class="fas fa-archive"></i> Canales <button
-                    class="btn btn-dark btn-añadir-canal"> + </button> </button>
+                    class="btn btn-dark btn-añadir-canal"
+                    onclick="$('#crear-canal').show();$('#contenido-grupo1').hide();$('#contenido-conver1').hide();$('#contenido-conver2').hide();$('#contenido-conver3').hide();$('#contenido-grupo2').hide();">
+                    + </button> </button>
             <button type="button" id="btn-sec" class="btn btn-dark"
-                onclick="$('#contenido-grupo1').show();$('#contenido-conver1').hide();$('#contenido-conver2').hide();$('#contenido-conver3').hide();$('#contenido-grupo2').hide();"><i
+                onclick="$('#contenido-grupo1').show();$('#contenido-conver1').hide();$('#contenido-conver2').hide();$('#contenido-conver3').hide();$('#contenido-grupo2').hide();$('#crear-canal').hide();"><i
                     class="fa-solid fa-user-group"></i> Canal de la clase grupo B2</button>
             <button type="button" id="btn-sec" class="btn btn-dark"
-                onclick="$('#contenido-grupo2').show();$('#contenido-conver1').hide();$('#contenido-conver2').hide();$('#contenido-conver3').hide();$('#contenido-grupo1').hide();">
+                onclick="$('#contenido-grupo2').show();$('#contenido-conver1').hide();$('#contenido-conver2').hide();$('#contenido-conver3').hide();$('#contenido-grupo1').hide();$('#crear-canal').hide();">
                 <i class="fa-solid fa-user-group"></i> Canal de empresa GeeksHubs</button>
             <button type="button" id="btn" class="btn btn-dark"> <i class="fas fa-comment"></i> Mensajes
                 directos</button>
             <button type="button" id="btn-sec" class="btn btn-dark"
-                onclick="$('#contenido-conver1').show();$('#contenido-conver2').hide();$('#contenido-conver3').hide();$('#contenido-grupo1').hide();$('#contenido-grupo2').hide();"><i
+                onclick="$('#contenido-conver1').show();$('#contenido-conver2').hide();$('#contenido-conver3').hide();$('#contenido-grupo1').hide();$('#contenido-grupo2').hide();$('#crear-canal').hide();"><i
                     class="fa-solid fa-user"></i> Raúl Reif</button>
             <button type="button" id="btn-sec" class="btn btn-dark"
-                onclick="$('#contenido-conver2').show();$('#contenido-conver1').hide();$('#contenido-conver3').hide();$('#contenido-grupo1').hide();$('#contenido-grupo2').hide();"><i
+                onclick="$('#contenido-conver2').show();$('#contenido-conver1').hide();$('#contenido-conver3').hide();$('#contenido-grupo1').hide();$('#contenido-grupo2').hide();$('#crear-canal').hide();"><i
                     class="fa-solid fa-user"></i> Aina Moreno</button>
             <button type="button" id="btn-sec" class="btn btn-dark"
-                onclick="$('#contenido-conver3').show();$('#contenido-conver1').hide();$('#contenido-conver2').hide();$('#contenido-grupo1').hide();$('#contenido-grupo2').hide();"><i
+                onclick="$('#contenido-conver3').show();$('#contenido-conver1').hide();$('#contenido-conver2').hide();$('#contenido-grupo1').hide();$('#contenido-grupo2').hide();$('#crear-canal').hide();"><i
                     class="fa-solid fa-user"></i> Cristian C. Moreno</button>
 
         </div>
@@ -63,9 +65,7 @@
                     </div>
                 </div>
             </nav>
-            <div class="canales">
-
-            </div>
+           
             <div class="contenedor-menus px-3 pt-4" id="contenido-grupo1">
                 <h2 class="fs-5">Grupo de clase B2</h2>
                 <time class="fecha" datetime="2022-08-08"> Lunes 08 de agosto, 2022 </time>
@@ -76,16 +76,14 @@
                         <span class="mensaje"> Hola clase! ¿Cómo lleváis los primeros días? <time datetime="17:38"
                                 class="fecha">17:38</time></span>
                     </div>
-                   
                 </div>
-
                 <nav class="input-mensajes">
                     <form class="">
                         <div class="input-group">
                             <input type="text" id="contenido-mensaje" class="form-control contenido-mensaje"
-                                placeholder="    Escriba su mensaje aquí" value="">
+                                placeholder="    Escriba su mensaje aquí">
                             <button id="btn-enviar-mensaje" class="btn-enviar-mensaje input-group-text btn btn-dark"
-                                type="button" onclick="salidaMensaje()"><i class="fas fa-paper-plane"></i></button>
+                                type="button" onclick="salidaMensaje(contenidoMensaje, bloquesMensajes)"><i class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </nav>
