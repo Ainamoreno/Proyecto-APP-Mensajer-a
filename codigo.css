@@ -113,7 +113,7 @@ body {
 }
 
 .crear-canal {
-    display: none;
+    visibility: hidden;
 }
 .formulario-canal {
     display: flex;

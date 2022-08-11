@@ -22,7 +22,7 @@
 
             <button type="button" name="" id="btn" class="btn btn-dark"><i class="fas fa-archive"></i> Canales <button
                     class="btn btn-dark btn-añadir-canal"
-                    onclick="$('#crear-canal').show();$('#contenido-grupo1').hide();$('#contenido-conver1').hide();$('#contenido-conver2').hide();$('#contenido-conver3').hide();$('#contenido-grupo2').hide();">
+                    onclick="mostrarFormularioNuevoCanal()">
                     + </button> </button>
 
             <div id="contenedor-canales"> </div>
@@ -62,8 +62,10 @@
                     </div>
                 </div>
             </nav>
-            <div id="crear-canal" class="crear-canal">
-                <div id="formulario-canal" class="formulario-canal">
+            <div class="contenedor-menus px-3 pt-4" id="contenido-canal"></div>
+            
+            <div id="formulario-canal" class="crear-canal">
+                <div class="formulario-canal">
                     <span class="titulo-formulario-canal">CREACIÓN DE UN NUEVO CANAL</span>
                     <label class="label-crear-canal">Nombre del canal: </label>
                     <input id="nombre-nuevo-canal" type="text">
@@ -73,27 +75,10 @@
                     <button class="input-group-text btn btn-dark" type="button" onclick="crearCanal()">CREAR CANAL
                     </button>
                 </div>
-
-                <div id="creacion-canal">
-                    <div>
-                        <nav class="input-mensajes">
-                            <form class="">
-                                <div class="input-group">
-                                    <input type="text" id="contenido-mensaje-canal"
-                                        class="form-control contenido-mensaje-canal"
-                                        placeholder="    Escriba su mensaje aquí" value="hola">
-                                    <button id="btn-enviar-mensaje"
-                                        class="btn-enviar-mensaje input-group-text btn btn-dark" type="button"
-                                        onclick="salidaMensaje(contenidoMensajeCanalNuevo, bloqueCanal)"><i
-                                            class="fas fa-paper-plane"></i></button>
-                                </div>
-                            </form>
-                        </nav>
-                    </div>
-                </div>
+                
             </div>
 
-            <div class="contenedor-menus px-3 pt-4" id="contenido-canal"></div>
+            
         </div>
     </div>
     </div>

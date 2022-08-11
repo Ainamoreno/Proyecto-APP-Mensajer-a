@@ -54,6 +54,9 @@ mostrarCanal = (indiceCanal) => {
     contenidoCanal.innerHTML = estructuraCanal;
     contenidoMensaje = document.getElementById('contenido-mensaje');
     bloquesMensajes = document.getElementById('bloques-mensajes');
+
+    bloqueFormularioCanal.style.visibility = 'hidden';
+    contenidoCanal.style.visibility = 'unset';
 }
 
 salidaMensaje = () => {
@@ -73,6 +76,7 @@ salidaMensaje = () => {
 }
 
 mostrarCanalesSidebar = () => {
+    contenedorCanales.innerHTML = ''
     listaCanales.forEach((canal, index) => {
         let estructuraCanal = `<button type="button" id="btn-sec" class="btn btn-dark" onclick="mostrarCanal(${index})"><i
         class="fa-solid fa-user-group"></i>${canal.titulo}</button>`;
@@ -85,16 +89,23 @@ mostrarCanalesSidebar = () => {
 crearCanal = () => {
     let nombreCanal = nombreNuevoCanal.value;
     let descripcionCanal = descripcionNuevoCanal.value;
-    let estructuraCanal =
-        `<div class="formulario-canal px-3 pt-4">
-        <div class="titulo-creacion-canal fs-5" >${nombreCanal}</div> 
-        <div>${descripcionCanal}</div>
-        
-        
-    </div>`
+    let canal = {
+        titulo: nombreCanal,
+        descripcion: descripcionCanal,
+        mensajes: []
+    };
+    listaCanales.push(canal);
 
+    // bloqueFormularioCanal.innerHTML = '';
 
-    bloqueFormularioCanal.innerHTML = '';
+    mostrarCanalesSidebar()
+}
+
+mostrarFormularioNuevoCanal = () => {
+    nombreNuevoCanal.value = ''
+    descripcionNuevoCanal.value = ''
+    bloqueFormularioCanal.style.visibility = 'unset';
+    contenidoCanal.innerHTML = ''
 }
 
 mostrarCanalesSidebar()
