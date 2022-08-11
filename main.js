@@ -1,12 +1,16 @@
 // Elementos chat canal
-let contenidoMensaje = document.getElementById('contenido-mensaje');
-let bloquesMensajes = document.getElementById('bloques-mensajes');
+let contenidoMensaje;
+let bloquesMensajes;
 const contenidoCanal = document.getElementById('contenido-canal');
 
 // Elementos formulario nuevo canal
 const bloqueFormularioCanal = document.getElementById('formulario-canal');
 const nombreNuevoCanal = document.getElementById('nombre-nuevo-canal');
 const descripcionNuevoCanal = document.getElementById('descrip-nuevo-canal');
+
+// Elementos pantalla canales
+const contenedorPantallaCanales = document.getElementById('contenedor-pantalla-canales');
+const contenedorBtnsPantallaCanales = document.getElementById('contenedor-btns-pantalla-canales');
 
 // Elementos sidebar
 const contenedorCanales = document.getElementById('contenedor-canales');
@@ -55,8 +59,11 @@ mostrarCanal = (indiceCanal) => {
     contenidoMensaje = document.getElementById('contenido-mensaje');
     bloquesMensajes = document.getElementById('bloques-mensajes');
 
-    bloqueFormularioCanal.style.visibility = 'hidden';
-    contenidoCanal.style.visibility = 'unset';
+    bloqueFormularioCanal.style.display = 'none';
+    contenedorPantallaCanales.style.display = 'none';
+    contenidoCanal.style.display = 'block';
+
+
 }
 
 salidaMensaje = () => {
@@ -95,17 +102,30 @@ crearCanal = () => {
         mensajes: []
     };
     listaCanales.push(canal);
-
-    // bloqueFormularioCanal.innerHTML = '';
+    nombreNuevoCanal.value = '';
+    descripcionNuevoCanal.value = '';
 
     mostrarCanalesSidebar()
 }
 
 mostrarFormularioNuevoCanal = () => {
-    nombreNuevoCanal.value = ''
-    descripcionNuevoCanal.value = ''
-    bloqueFormularioCanal.style.visibility = 'unset';
-    contenidoCanal.innerHTML = ''
+    bloqueFormularioCanal.style.display = 'block';
+    contenidoCanal.style.display = 'none';
+    contenedorPantallaCanales.style.display = 'none';
 }
 
-mostrarCanalesSidebar()
+mostrarPantallaCanales = () => {
+    contenedorBtnsPantallaCanales.innerHTML = ''
+    listaCanales.forEach((canal, index) => {
+        let estructuraCanal = `<button type="button" id="btn-sec" class="btn btn-dark" onclick="mostrarCanal(${index})"><i
+        class="fa-solid fa-user-group"></i>${canal.titulo}</button>`;
+
+        contenedorBtnsPantallaCanales.innerHTML += estructuraCanal;
+    });
+    bloqueFormularioCanal.style.display = 'none';
+    contenidoCanal.style.display = 'none';
+    contenedorPantallaCanales.style.display = 'block';
+}
+
+mostrarCanalesSidebar();
+mostrarPantallaCanales();

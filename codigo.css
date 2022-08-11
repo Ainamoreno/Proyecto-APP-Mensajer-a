@@ -113,11 +113,13 @@ body {
 }
 
 .crear-canal {
-    visibility: hidden;
+    display: none;
 }
 .formulario-canal {
     display: flex;
     flex-direction: column;
+    padding: 0em 2.5em;
+    margin-top: 1em;
 }
 
 .formulario-canal .label-crear-canal {
@@ -141,4 +143,12 @@ body {
 .titulo-creacion-canal {
     text-align: center;
    
+}
+
+.titulo-canales {
+    font-size: xxx-large;
+    font-family: 'FontAwesome';
+    margin: 0.75em;
+    color: cadetblue;
+    text-shadow: 5px 3px 3px black;
 }

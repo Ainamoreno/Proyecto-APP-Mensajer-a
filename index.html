@@ -20,12 +20,12 @@
                         class="fa-solid fa-bars-staggered"></i></button>
             </div>
 
-            <button type="button" name="" id="btn" class="btn btn-dark"><i class="fas fa-archive"></i> Canales <button
-                    class="btn btn-dark btn-añadir-canal"
-                    onclick="mostrarFormularioNuevoCanal()">
-                    + </button> </button>
-
-            <div id="contenedor-canales"> </div>
+            <button type="button" name="" id="btn" class="btn btn-dark" onclick="mostrarPantallaCanales()"><i class="fas fa-archive"
+                    ></i> Canales </button>
+            <button class="btn btn-dark btn-añadir-canal" onclick="mostrarFormularioNuevoCanal()">
+                + </button>
+            <!-- Contenedor canales sidebar -->
+            <div id="contenedor-canales"></div>
 
             <button type="button" id="btn" class="btn btn-dark"> <i class="fas fa-comment"></i> Mensajes
                 directos</button>
@@ -62,23 +62,32 @@
                     </div>
                 </div>
             </nav>
+
+            <!-- Contenedor lista canales -->
+            <div id="contenedor-pantalla-canales" >
+                <h2 class="titulo-canales" >Canales</h2>
+                <div id="contenedor-btns-pantalla-canales"> </div> 
+            </div>
+
+            <!-- Contenedor contenido canal -->
             <div class="contenedor-menus px-3 pt-4" id="contenido-canal"></div>
-            
+
+            <!-- Contenedor formulario canal -->
             <div id="formulario-canal" class="crear-canal">
-                <div class="formulario-canal">
+                <div class="formulario-canal ">
                     <span class="titulo-formulario-canal">CREACIÓN DE UN NUEVO CANAL</span>
-                    <label class="label-crear-canal">Nombre del canal: </label>
-                    <input id="nombre-nuevo-canal" type="text">
-                    <label class="label-crear-canal">Descripción del canal:</label>
-                    <input placeholder="Opcional" id="descrip-nuevo-canal" type="text">
+                    <label for="nombre-nuevo-canal" class="label-crear-canal">Nombre del canal: </label>
+                    <input id="nombre-nuevo-canal" class="form-control" type="text">
+                    <label for="descrip-nuevo-canal" class="label-crear-canal">Descripción del canal:</label>
+                    <input  placeholder="Opcional" id="descrip-nuevo-canal" class="form-control" type="text">
                     <br>
                     <button class="input-group-text btn btn-dark" type="button" onclick="crearCanal()">CREAR CANAL
                     </button>
                 </div>
-                
+
             </div>
 
-            
+
         </div>
     </div>
     </div>
