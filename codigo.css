@@ -134,6 +134,8 @@ body {
     width: fit-content;
     padding: 1em;
     border-radius: 1em;
+    font-weight: bold;
+    font-family: inherit;
 }
 
 .titulo-canal {

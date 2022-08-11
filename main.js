@@ -15,6 +15,9 @@ const contenedorBtnsPantallaCanales = document.getElementById('contenedor-btns-p
 // Elementos sidebar
 const contenedorCanales = document.getElementById('contenedor-canales');
 
+// Elementos mensajes directos
+const contenedorMensajesDirectos = document.getElementById('contenedor-mensajes-directos');
+
 let listaCanales = [
     {
         titulo: 'Grupo de clase B2',
@@ -29,6 +32,8 @@ let listaCanales = [
         ]
     }
 ]
+
+
 
 mostrarCanal = (indiceCanal) => {
     let canal = listaCanales[indiceCanal];
@@ -129,3 +134,19 @@ mostrarPantallaCanales = () => {
 
 mostrarCanalesSidebar();
 mostrarPantallaCanales();
+
+let listaMensajes = [
+    {
+        imagen: '',
+        nombre: 'Raúl Reif',
+        estado: '',
+        mensajes: [
+            {
+                nombre: 'Claudia Pérez',
+                texto: 'Hola que tal',
+                fecha: new Data(),
+            }
+        ]
+    }
+]
+
