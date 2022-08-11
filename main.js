@@ -17,6 +17,7 @@ const contenedorCanales = document.getElementById('contenedor-canales');
 
 // Elementos mensajes directos
 const contenedorMensajesDirectos = document.getElementById('contenedor-mensajes-directos');
+const buscadorChat = document.getElementById('buscador-chat');
 
 let listaCanales = [
     {
@@ -64,6 +65,7 @@ mostrarCanal = (indiceCanal) => {
     contenidoMensaje = document.getElementById('contenido-mensaje');
     bloquesMensajes = document.getElementById('bloques-mensajes');
 
+    buscadorChat.style.display = 'none';
     bloqueFormularioCanal.style.display = 'none';
     contenedorPantallaCanales.style.display = 'none';
     contenidoCanal.style.display = 'block';
@@ -113,10 +115,19 @@ crearCanal = () => {
     mostrarCanalesSidebar()
 }
 
+mostrarBuscadorChat = () => {
+    buscadorChat.style.display = 'block';
+    bloqueFormularioCanal.style.display = 'none';
+    contenidoCanal.style.display = 'none';
+    contenedorPantallaCanales.style.display = 'none';
+
+}
+
 mostrarFormularioNuevoCanal = () => {
     bloqueFormularioCanal.style.display = 'block';
     contenidoCanal.style.display = 'none';
     contenedorPantallaCanales.style.display = 'none';
+    buscadorChat.style.display = 'none';
 }
 
 mostrarPantallaCanales = () => {
@@ -127,6 +138,7 @@ mostrarPantallaCanales = () => {
 
         contenedorBtnsPantallaCanales.innerHTML += estructuraCanal;
     });
+    buscadorChat.style.display = 'none';
     bloqueFormularioCanal.style.display = 'none';
     contenidoCanal.style.display = 'none';
     contenedorPantallaCanales.style.display = 'block';
@@ -150,3 +162,4 @@ let listaMensajes = [
     }
 ]
 
+mostrarChatsSidebar();
