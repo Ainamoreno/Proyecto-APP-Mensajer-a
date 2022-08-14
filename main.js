@@ -18,6 +18,7 @@ const contenedorCanales = document.getElementById('contenedor-canales');
 // Elementos mensajes directos
 const contenedorMensajesDirectos = document.getElementById('contenedor-mensajes-directos');
 const buscadorChat = document.getElementById('buscador-chat');
+const contenedorContenidoChat = document.getElementById('contenedor-contenido-chat');
 
 let listaCanales = [
     {
@@ -33,8 +34,6 @@ let listaCanales = [
         ]
     }
 ]
-
-
 
 mostrarCanal = (indiceCanal) => {
     let canal = listaCanales[indiceCanal];
@@ -65,12 +64,49 @@ mostrarCanal = (indiceCanal) => {
     contenidoMensaje = document.getElementById('contenido-mensaje');
     bloquesMensajes = document.getElementById('bloques-mensajes');
 
+    contenedorContenidoChat.style.display = 'none';
     buscadorChat.style.display = 'none';
     bloqueFormularioCanal.style.display = 'none';
     contenedorPantallaCanales.style.display = 'none';
     contenidoCanal.style.display = 'block';
 
 
+}
+
+mostrarChatMensajes = (indiceChat) => {
+    let chat = listaChats[indiceChat];
+    let estructuraChatMensaje = ` <div id="bloques-mensajes"> <div class="fs-5 nombre-mensaje">${chat.nombre}</div>
+    <h3>${chat.estado}</h3> <a>${chat.imagen}</a> 
+    </div>`
+    for (let mensaje of chat.mensajes) {
+        let hora = `${mensaje.fecha.getHours()}:${mensaje.fecha.getMinutes()}`;
+        estructuraChatMensaje += `<div class="bloque-mensaje jesus>
+        <label class="nombre-mensaje ">${mensaje.nombre}:</label>
+        <br>
+        <span class="mensaje">${mensaje.texto}<time datetime="${hora}"
+                class="fecha">${hora}</time></span>
+    </div> `
+    }
+    estructuraChatMensaje += `</div>
+    <nav class="input-mensajes">
+        <form class="">
+            <div class="input-group">
+                <input type="text" id="contenido-mensaje" class="form-control contenido-mensaje"
+                    placeholder="    Escriba su mensaje aquí">
+                <button id="btn-enviar-mensaje" class="btn-enviar-mensaje input-group-text btn btn-dark"
+                    type="button" onclick="salidaMensaje()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </form>
+    </nav>`;
+    contenedorContenidoChat.innerHTML = estructuraChatMensaje;
+    contenidoMensaje = document.getElementById('contenido-mensaje');
+    bloquesMensajes = document.getElementById('bloques-mensajes');
+
+    buscadorChat.style.display = 'none';
+    bloqueFormularioCanal.style.display = 'none';
+    contenedorPantallaCanales.style.display = 'none';
+    contenidoCanal.style.display = 'none';
+    contenedorContenidoChat.style.display = 'block';
 }
 
 salidaMensaje = () => {
@@ -84,7 +120,6 @@ salidaMensaje = () => {
                 <br>
                 <span class="mensaje"> ${mensaje}<time datetime="${hora}" class="fecha">${hora} </time></span>
         </div>`
-
     bloquesMensajes.innerHTML += estructuraMensaje;
     contenidoMensaje.value = '';
 }
@@ -120,7 +155,7 @@ mostrarBuscadorChat = () => {
     bloqueFormularioCanal.style.display = 'none';
     contenidoCanal.style.display = 'none';
     contenedorPantallaCanales.style.display = 'none';
-
+    contenedorContenidoChat.style.display = 'none';
 }
 
 mostrarFormularioNuevoCanal = () => {
@@ -128,6 +163,7 @@ mostrarFormularioNuevoCanal = () => {
     contenidoCanal.style.display = 'none';
     contenedorPantallaCanales.style.display = 'none';
     buscadorChat.style.display = 'none';
+    contenedorContenidoChat.style.display = 'none';
 }
 
 mostrarPantallaCanales = () => {
@@ -141,13 +177,14 @@ mostrarPantallaCanales = () => {
     buscadorChat.style.display = 'none';
     bloqueFormularioCanal.style.display = 'none';
     contenidoCanal.style.display = 'none';
+    contenedorContenidoChat.style.display = 'none';
     contenedorPantallaCanales.style.display = 'block';
 }
 
 mostrarCanalesSidebar();
 mostrarPantallaCanales();
 
-let listaMensajes = [
+let listaChats = [
     {
         imagen: '',
         nombre: 'Raúl Reif',
@@ -156,10 +193,35 @@ let listaMensajes = [
             {
                 nombre: 'Claudia Pérez',
                 texto: 'Hola que tal',
-                fecha: new Data(),
+                fecha: new Date(),
             }
         ]
     }
 ]
+
+crearChat = () => {
+    let nombreChat = document.getElementById('nombre-nuevo-chat').value
+    let estadoChat = ''
+    let chat = {
+        nombre: nombreChat,
+        estado: estadoChat,
+        mensajes: []
+    };
+    listaChats.push(chat);
+
+    mostrarChatsSidebar()
+}
+
+
+mostrarChatsSidebar = () => {
+    contenedorMensajesDirectos.innerHTML = ''
+    listaChats.forEach((canal, index) => {
+        let estructuraChatMensaje = `<button type="button" id="btn-sec" class="btn btn-dark" onclick="mostrarChatMensajes(${index})"><i
+        class="fa-solid fa-user-group"></i>${canal.nombre}</button>`;
+
+        contenedorMensajesDirectos.innerHTML += estructuraChatMensaje;
+
+    });
+}
 
 mostrarChatsSidebar();

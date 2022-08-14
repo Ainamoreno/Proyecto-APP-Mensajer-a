@@ -81,7 +81,7 @@
                     <label for="nombre-nuevo-chat" class="">Nombre amigo con el que quieres abrir conversación: </label>
                     <input id="nombre-nuevo-chat" class="form-control" type="text">
                     <br>
-                    <button class="input-group-text btn btn-dark" type="button">ABRIR CHAT
+                    <button class="input-group-text btn btn-dark" type="button" onclick="crearChat()">ABRIR CHAT
                     </button>
                 </div>
 
@@ -95,6 +95,9 @@
 
             <!-- Contenedor contenido canal -->
             <div class="contenedor-menus px-3 pt-4" id="contenido-canal"></div>
+
+            <!-- Contenedor contenido chat -->
+            <div id="contenedor-contenido-chat"> </div>
 
             <!-- Contenedor formulario canal -->
             <div id="formulario-canal" class="crear-canal">
@@ -116,8 +119,6 @@
     </div>
     </div>
     </div>
-
-
 
     <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
