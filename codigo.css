@@ -54,6 +54,7 @@ body {
 .btn-añadir-canal {
     margin-left: 4em;
 }
+
 .btn-input-mensajes {
     width: 2em;
     height: 2em;
@@ -89,11 +90,12 @@ body {
     width: 100%;
 }
 
-.contenedor-menus .bloque-mensaje {
+.bloque-mensaje {
     text-align: initial;
     padding: 0.2em;
     border-radius: 0.7em;
     width: fit-content;
+    background-color: rgba(128, 226, 63, 0.39);
 }
 
 .bloque-mensaje-mio {
@@ -105,17 +107,20 @@ body {
     align-self: flex-end;
     margin-top: 1em;
 }
+
 .nombre-mensaje {
-    font-weight: 16px !important;
+    font-weight: 650;
 }
 
-.jesus {
-    background-color: rgba(128, 226, 63, 0.39);
+.nombre-chat{
+    font-weight: 700;
+    font-family: sans-serif;
 }
 
 .crear-canal {
     display: none;
 }
+
 .formulario-canal {
     display: flex;
     flex-direction: column;
@@ -142,11 +147,13 @@ body {
 
 .titulo-canal {
     text-align: center;
+    font-weight: 700;
+    font-family: sans-serif;
 }
 
 .titulo-creacion-canal {
     text-align: center;
-   
+
 }
 
 .titulo-canales {
