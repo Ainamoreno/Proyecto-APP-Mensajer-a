@@ -1,6 +1,6 @@
 mostrarChatMensajes = (indiceChat) => {
     let chat = listaChats[indiceChat];
-    let estructuraChatMensaje = ` <div id="bloques-mensajes" class="bloques-mensajes"> <div class="fs-5 nombre-chat">${chat.nombre}</div>
+    let estructuraChatMensaje = ` <div id="bloques-mensajes-chat" class="bloques-mensajes"> <div class="fs-5 nombre-chat">${chat.nombre}</div>
     <h3>${chat.estado}</h3> <a>${chat.imagen}</a> 
     </div>`
     for (let mensaje of chat.mensajes) {
@@ -16,17 +16,16 @@ mostrarChatMensajes = (indiceChat) => {
     <nav class="input-mensajes">
         <form class="">
             <div class="input-group">
-                <input type="text" id="contenido-mensaje" class="form-control contenido-mensaje"
+                <input type="text" id="contenido-mensaje-chat" class="form-control contenido-mensaje"
                     placeholder="    Escriba su mensaje aquí">
                 <button id="btn-enviar-mensaje" class="btn-enviar-mensaje input-group-text btn btn-dark"
-                    type="button" onclick="salidaMensaje()"><i class="fas fa-paper-plane"></i></button>
+                    type="button" onclick="salidaMensajeChat()"><i class="fas fa-paper-plane"></i></button>
             </div>
         </form>
     </nav>
     </div>`;
     contenedorContenidoChat.innerHTML = estructuraChatMensaje;
-    contenidoMensaje = document.getElementById('contenido-mensaje');
-    bloquesMensajes = document.getElementById('bloques-mensajes');
+    bloquesMensajes = document.getElementById('bloques-mensajes-chat');
 
     buscadorChat.style.display = 'none';
     bloqueFormularioCanal.style.display = 'none';
@@ -35,18 +34,20 @@ mostrarChatMensajes = (indiceChat) => {
     contenedorContenidoChat.style.display = 'block';
 }
 
-salidaMensaje = () => {
-    let mensaje = contenidoMensaje.value;
-    let estructuraMensaje = '';
+salidaMensajeChat = () => {
+    contenidoMensaje = document.getElementById('contenido-mensaje-chat');
+    let textoMensaje = contenidoMensaje.value;
     let date = new Date();
     let hora = `${date.getHours()}:${date.getMinutes()}`;
+    let estructuraMensaje = '';
     estructuraMensaje +=
         `<div class="bloque-mensaje-mio">
                 <label class="nombre-mensaje">Yo:</label>
                 <br>
-                <span class="mensaje"> ${mensaje}<time datetime="${hora}" class="fecha">${hora} </time></span>
+                <span class="mensaje"> ${textoMensaje}<time datetime="${hora}" class="fecha">${hora} </time></span>
         </div>`
     bloquesMensajes.innerHTML += estructuraMensaje;
     contenidoMensaje.value = '';
-  //  listaCanales[0].mensajesB.push(estructuraMensaje)//
+
+
 }

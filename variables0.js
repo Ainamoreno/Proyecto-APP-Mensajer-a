@@ -4,7 +4,6 @@ let bloquesMensajesCanal;
 let contenidoMensajeChat;
 let bloquesMensajesChat;
 const contenidoCanal = document.getElementById('contenido-canal');
-let contenidoMensaje = document.getElementById('contenido-mensaje');
 
 // Elementos formulario nuevo canal
 const bloqueFormularioCanal = document.getElementById('formulario-canal');
