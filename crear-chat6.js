@@ -1,17 +1,3 @@
-let listaChats = [
-    {
-        imagen: '',
-        nombre: 'Raúl Reif',
-        estado: '',
-        mensajes: [
-            {
-                nombre: 'Claudia Pérez',
-                texto: 'Hola que tal',
-                fecha: new Date(),
-            }
-        ]
-    }
-]
 
 crearChat = () => {
     let nombreChat = document.getElementById('nombre-nuevo-chat').value

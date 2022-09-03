@@ -41,6 +41,7 @@ mostrarCanal = (indiceCanal) => {
             </div>
         </form>
     </nav> 
+    </div>
     </div>`;
     contenidoCanal.innerHTML = estructuraCanal;
     bloquesMensajes = document.getElementById('bloques-mensajes-canal');
