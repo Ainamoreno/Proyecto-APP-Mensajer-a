@@ -4,11 +4,15 @@ let bloquesMensajesCanal;
 let contenidoMensajeChat;
 let bloquesMensajesChat;
 const contenidoCanal = document.getElementById('contenido-canal');
+const btnEnviarMensaje = document.getElementById('btn-enviar-mensaje');
 
 // Elementos formulario nuevo canal
 const bloqueFormularioCanal = document.getElementById('formulario-canal');
 const nombreNuevoCanal = document.getElementById('nombre-nuevo-canal');
 const descripcionNuevoCanal = document.getElementById('descrip-nuevo-canal');
+
+// Elementos crear chat
+const nombreNuevoChat = document.getElementById("nombre-nuevo-chat");
 
 // Elementos pantalla canales
 const contenedorPantallaCanales = document.getElementById('contenedor-pantalla-canales');

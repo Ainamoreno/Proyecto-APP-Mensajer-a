@@ -8,7 +8,7 @@ crearChat = () => {
         mensajes: []
     };
     listaChats.push(chat);
-
+    nombreNuevoChat.value= ''
     mostrarChatsSidebar()
 }
 

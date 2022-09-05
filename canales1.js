@@ -11,7 +11,7 @@ let listaCanales = [
         ]
 
     }
-]
+];
 
 mostrarCanal = (indiceCanal) => {
     let canal = listaCanales[indiceCanal];
@@ -26,23 +26,25 @@ mostrarCanal = (indiceCanal) => {
         <br>
         <span class="mensaje">${mensaje.texto}<time datetime="${hora}"
                 class="fecha">${hora}</time></span>
+            </div>
             </div>`
     }
 
-    estructuraCanal +=
-        `<div>
-    <nav class="input-mensajes">
+    /*btnEnviarMensaje.addEventListener("click", () => {
+        salidaMensajeCanal(indiceCanal)
+    })*/
+    estructuraCanal += `<div class="input-mensajes" >
+    <nav>
         <form class="">
             <div class="input-group">
                 <input type="text" id="contenido-mensaje-canal" class="form-control contenido-mensaje"
                     placeholder="    Escriba su mensaje aquí">
                 <button id="btn-enviar-mensaje" class="btn-enviar-mensaje input-group-text btn btn-dark"
-                    type="button" onclick="salidaMensajeCanal(${indiceCanal})"><i class="fas fa-paper-plane"></i></button>
+                    type="button" onclick= "salidaMensajeCanal(${indiceCanal})"><i class="fas fa-paper-plane"></i></button>
             </div>
         </form>
     </nav> 
-    </div>
-    </div>`;
+    </div>`
     contenidoCanal.innerHTML = estructuraCanal;
     bloquesMensajes = document.getElementById('bloques-mensajes-canal');
 
@@ -55,6 +57,7 @@ mostrarCanal = (indiceCanal) => {
 
 }
 
+
 salidaMensajeCanal = (indiceCanal) => {
     contenidoMensaje = document.getElementById('contenido-mensaje-canal');
     let textoMensaje = contenidoMensaje.value;
@@ -66,7 +69,7 @@ salidaMensajeCanal = (indiceCanal) => {
                 <label class="nombre-mensaje">Yo:</label>
                 <br>
                 <span class="mensaje"> ${textoMensaje}<time datetime="${hora}" class="fecha">${hora} </time></span>
-        </div>`
+        </div>`;
     bloquesMensajes.innerHTML += estructuraMensaje;
     contenidoMensaje.value = '';
 
@@ -77,4 +80,5 @@ salidaMensajeCanal = (indiceCanal) => {
         fecha: date,
     };
     canal.mensajes.push(mensaje);
+    bloquesMensajes.scroll(0, 99999999);
 }
