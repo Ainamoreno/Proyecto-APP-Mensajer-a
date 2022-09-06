@@ -16,6 +16,7 @@ crearChat = () => {
 }
 
 
+
 mostrarChatsSidebar = () => {
     contenedorMensajesDirectos.innerHTML = ''
     listaChats.forEach((canal, index) => {

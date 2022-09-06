@@ -1,5 +1,7 @@
 //Elemento pantalla inicio
 const contenedorPantallaInicio = document.getElementById('contenedor-pantalla-inicio');
+const contenedorBtnsPantallaChats = document.getElementById('contenedor-btns-pantalla-chats');
+const contenedorBtnsPantallaCanales = document.getElementById('contenedor-btns-pantalla-canales');
 
 // Elementos chat canal
 let contenidoMensajeCanal;
@@ -19,7 +21,7 @@ const nombreNuevoChat = document.getElementById("nombre-nuevo-chat");
 
 // Elementos pantalla canales
 const contenedorPantallaCanales = document.getElementById('contenedor-pantalla-canales');
-const contenedorBtnsPantallaCanales = document.getElementById('contenedor-btns-pantalla-canales');
+
 
 // Elementos sidebar
 const contenedorCanales = document.getElementById('contenedor-canales');
