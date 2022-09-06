@@ -1,17 +1,4 @@
-let listaChats = [
-    {
-        imagen: '',
-        nombre: 'Raúl Reif',
-        estado: '',
-        mensajes: [
-            {
-                nombre: 'Claudia Pérez',
-                texto: 'Hola que tal',
-                fecha: new Date(),
-            }
-        ]
-    }
-]
+let listaChats = [];
 
 mostrarChatMensajes = (indiceChat) => {
     let chat = listaChats[indiceChat];
@@ -74,4 +61,5 @@ salidaMensajeChat = (indiceChat) => {
     };
     chat.mensajes.push(mensaje);
 
+    localStorage.setItem('LISTA_CHATS', JSON.stringify(listaChats))
 }

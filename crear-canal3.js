@@ -39,5 +39,6 @@ mostrarPantallaCanales = () => {
     contenedorPantallaCanales.style.display = 'block';
 }
 
+
 mostrarCanalesSidebar();
 mostrarPantallaCanales();

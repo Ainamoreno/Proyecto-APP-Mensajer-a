@@ -1,17 +1,4 @@
-let listaCanales = [
-    {
-        titulo: 'Grupo de clase B2',
-        descripcion: '',
-        mensajes: [
-            {
-                nombre: 'Jesús Rodríguez',
-                texto: 'Hola clase! ¿Cómo lleváis los primeros días?',
-                fecha: new Date(),
-            }
-        ]
-
-    }
-];
+let listaCanales = [];
 
 mostrarCanal = (indiceCanal) => {
     let canal = listaCanales[indiceCanal];
@@ -30,9 +17,6 @@ mostrarCanal = (indiceCanal) => {
             </div>`
     }
 
-    /*btnEnviarMensaje.addEventListener("click", () => {
-        salidaMensajeCanal(indiceCanal)
-    })*/
     estructuraCanal += `<div class="input-mensajes" >
     <nav>
         <form class="">
@@ -80,5 +64,8 @@ salidaMensajeCanal = (indiceCanal) => {
         fecha: date,
     };
     canal.mensajes.push(mensaje);
+    
+    localStorage.setItem('LISTA_CANALES', JSON.stringify(listaCanales));
+
     bloquesMensajes.scroll(0, 99999999);
 }
