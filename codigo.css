@@ -89,7 +89,7 @@ body {
     flex-direction: column;
     width: 100%;
     overflow: auto;
-    height: calc(70vh);
+    height: calc(63vh);
 }
 
 .bloque-mensaje {
@@ -149,6 +149,10 @@ body {
     font-family: sans-serif;
 }
 
+.descripcion-canal{
+    font-size: small;
+}
+
 .titulo-creacion-canal {
     text-align: center;
 
@@ -170,6 +174,16 @@ body {
 .nombre-chat{
     font-weight: 700;
     font-family: sans-serif;
-    margin-top: 1.2em;
+    font-size: 2em;
+}
+
+.contenedor-perfil {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.estado-chat {
+    font-size: small;
     margin-left: 0.5em;
+    font-style: oblique;
 }

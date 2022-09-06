@@ -1,14 +1,17 @@
 
 crearChat = () => {
     let nombreChat = document.getElementById('nombre-nuevo-chat').value
-    let estadoChat = ''
     let chat = {
         nombre: nombreChat,
-        estado: estadoChat,
         mensajes: []
     };
     listaChats.push(chat);
-    nombreNuevoChat.value= ''
+    nombreNuevoChat.value= '';
+    
+    if(!chat.imagen) {
+        chat.imagen = 'https://previews.123rf.com/images/alekseyvanin/alekseyvanin1712/alekseyvanin171200974/91724249-perfil-del-c%C3%ADrculo-para-avatar-.jpg'
+    }
+    localStorage.setItem('LISTA_CHATS', JSON.stringify(listaChats))
     mostrarChatsSidebar()
 }
 

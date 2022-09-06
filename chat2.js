@@ -1,13 +1,14 @@
 mostrarChatMensajes = (indiceChat) => {
     let chat = listaChats[indiceChat];
-    let estructuraChatMensaje = `<div> 
-    <img class="img-perfil" src="${chat.imagen}"> <div class="fs-5 nombre-chat">${chat.nombre}</div>
+    let estructuraChatMensaje = `<div class="contenedor-perfil"> 
+    <img class="img-perfil" src="${chat.imagen}">  
+    <div> <h1 class="nombre-chat">${chat.nombre}</h1> <h3 class="estado-chat">${chat.estado}</h3></div>
     </div>  
     
     <div id="bloques-mensajes-chat" class="bloques-mensajes">`
     
     for (let mensaje of chat.mensajes) {
-        let hora = `${mensaje.fecha.getHours()}:${mensaje.fecha.getMinutes()}`;
+        let hora = `${mensaje.fecha.getDate()}-${mensaje.fecha.getMonth()}-${mensaje.fecha.getFullYear()} ${mensaje.fecha.getHours()}:${mensaje.fecha.getMinutes()}`;
         estructuraChatMensaje += mensaje.nombre == 'Yo' ? '<div class="bloque-mensaje-mio">' : '<div class="bloque-mensaje jesus">'
         estructuraChatMensaje += `<label class="nombre-mensaje ">${mensaje.nombre}:</label> <time datetime="${hora}" class="fecha">${hora}</time>
         <br>
@@ -27,6 +28,7 @@ mostrarChatMensajes = (indiceChat) => {
     </nav>
     </div>
     </div>`;
+   
     contenedorContenidoChat.innerHTML = estructuraChatMensaje;
     bloquesMensajes = document.getElementById('bloques-mensajes-chat');
 
@@ -41,7 +43,7 @@ salidaMensajeChat = (indiceChat) => {
     contenidoMensaje = document.getElementById('contenido-mensaje-chat');
     let textoMensaje = contenidoMensaje.value;
     let date = new Date();
-    let hora = `${date.getHours()}:${date.getMinutes()}`;
+    let hora = `${mensaje.fecha.getDate()}-${mensaje.fecha.getMonth()}-${mensaje.fecha.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
     let estructuraMensaje = '';
     estructuraMensaje +=
         `<div class="bloque-mensaje-mio">

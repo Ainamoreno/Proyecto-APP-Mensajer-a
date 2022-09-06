@@ -1,12 +1,16 @@
+function addZero(i) {
+    if (i < 10) {i = "0" + i}
+    return i;
+  }
 
 mostrarCanal = (indiceCanal) => {
     let canal = listaCanales[indiceCanal];
-    let estructuraCanal = `<h2 class="fs-5 titulo-canal">${canal.titulo}</h2>
-    <time class="fecha" datetime="2022-08-08"> Lunes 08 de agosto, 2022 </time>
+    let estructuraCanal = `<h2 class=" titulo-canal">${canal.titulo}</h2> 
+    <h3 class = "descripcion-canal">${canal.descripcion} </h3>
     <div id="bloques-mensajes-canal" class="bloques-mensajes">`;
 
     for (let mensaje of canal.mensajes) {
-        let hora = `${mensaje.fecha.getHours()}:${mensaje.fecha.getMinutes()}`;
+        let hora = `${mensaje.fecha.getDate()}-${mensaje.fecha.getMonth()}-${mensaje.fecha.getFullYear()} ${mensaje.fecha.getHours()}:${addZero(mensaje.fecha.getMinutes()) }`;
         estructuraCanal += mensaje.nombre == 'Yo' ? '<div class="bloque-mensaje-mio">' : '<div class="bloque-mensaje">'
         estructuraCanal += `<label class="nombre-mensaje ">${mensaje.nombre}:</label> <time datetime="${hora}" class="fecha">${hora}</time></span>
             <br>
@@ -26,7 +30,7 @@ mostrarCanal = (indiceCanal) => {
         </form>
     </nav> 
     </div>`
-    console.log(estructuraCanal);
+
     contenidoCanal.innerHTML = estructuraCanal;
     bloquesMensajes = document.getElementById('bloques-mensajes-canal');
 
@@ -41,7 +45,7 @@ salidaMensajeCanal = (indiceCanal) => {
     contenidoMensaje = document.getElementById('contenido-mensaje-canal');
     let textoMensaje = contenidoMensaje.value;
     let date = new Date();
-    let hora = `${date.getHours()}:${date.getMinutes()}`;
+    let hora = `${mensaje.fecha.getDate()}-${mensaje.fecha.getMonth()}-${mensaje.fecha.getFullYear()} ${date.getHours()}:${addZero(date.getMinutes())}`;
     let estructuraMensaje = '';
     estructuraMensaje +=
         `<div class="bloque-mensaje-mio">
