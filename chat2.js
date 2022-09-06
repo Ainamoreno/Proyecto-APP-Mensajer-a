@@ -1,18 +1,17 @@
-let listaChats = [];
-
 mostrarChatMensajes = (indiceChat) => {
     let chat = listaChats[indiceChat];
-    let estructuraChatMensaje = ` <div class="fs-5 nombre-chat">${chat.nombre}</div>
-    <h3>${chat.estado}</h3> <a>${chat.imagen}</a> 
+    let estructuraChatMensaje = `<div> 
+    <img class="img-perfil" src="${chat.imagen}"> <div class="fs-5 nombre-chat">${chat.nombre}</div>
+    </div>  
+    
     <div id="bloques-mensajes-chat" class="bloques-mensajes">`
     
     for (let mensaje of chat.mensajes) {
         let hora = `${mensaje.fecha.getHours()}:${mensaje.fecha.getMinutes()}`;
         estructuraChatMensaje += mensaje.nombre == 'Yo' ? '<div class="bloque-mensaje-mio">' : '<div class="bloque-mensaje jesus">'
-        estructuraChatMensaje += `<label class="nombre-mensaje ">${mensaje.nombre}:</label>
+        estructuraChatMensaje += `<label class="nombre-mensaje ">${mensaje.nombre}:</label> <time datetime="${hora}" class="fecha">${hora}</time>
         <br>
-        <span class="mensaje">${mensaje.texto}<time datetime="${hora}"
-                class="fecha">${hora}</time></span>
+        <span class="mensaje">${mensaje.texto}</span>
     </div>`
     }
     estructuraChatMensaje += `<div>
@@ -46,9 +45,9 @@ salidaMensajeChat = (indiceChat) => {
     let estructuraMensaje = '';
     estructuraMensaje +=
         `<div class="bloque-mensaje-mio">
-                <label class="nombre-mensaje">Yo:</label>
+                <label class="nombre-mensaje">Yo:</label> <time datetime="${hora}" class="fecha">${hora} </time>
                 <br>
-                <span class="mensaje"> ${textoMensaje}<time datetime="${hora}" class="fecha">${hora} </time></span>
+                <span class="mensaje"> ${textoMensaje}</span>
         </div>`
     bloquesMensajes.innerHTML += estructuraMensaje;
     contenidoMensaje.value = '';

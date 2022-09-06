@@ -17,7 +17,7 @@ mostrarChatsSidebar = () => {
     contenedorMensajesDirectos.innerHTML = ''
     listaChats.forEach((canal, index) => {
         let estructuraChatMensaje = `<button type="button" id="btn-sec" class="btn btn-dark" onclick="mostrarChatMensajes(${index})"><i
-        class="fa-solid fa-user-group"></i>${canal.nombre}</button>`;
+        class="fa-solid fa-user-group"></i>&nbsp;${canal.nombre}</button>`;
 
         contenedorMensajesDirectos.innerHTML += estructuraChatMensaje;
 

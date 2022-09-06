@@ -1,4 +1,3 @@
-let listaCanales = [];
 
 mostrarCanal = (indiceCanal) => {
     let canal = listaCanales[indiceCanal];
@@ -8,15 +7,13 @@ mostrarCanal = (indiceCanal) => {
 
     for (let mensaje of canal.mensajes) {
         let hora = `${mensaje.fecha.getHours()}:${mensaje.fecha.getMinutes()}`;
-        estructuraCanal += mensaje.nombre == 'Yo' ? '<div class="bloque-mensaje-mio">' : '<div class="bloque-mensaje jesus">'
-        estructuraCanal += `<label class="nombre-mensaje ">${mensaje.nombre}:</label>
-        <br>
-        <span class="mensaje">${mensaje.texto}<time datetime="${hora}"
-                class="fecha">${hora}</time></span>
-            </div>
-            </div>`
+        estructuraCanal += mensaje.nombre == 'Yo' ? '<div class="bloque-mensaje-mio">' : '<div class="bloque-mensaje">'
+        estructuraCanal += `<label class="nombre-mensaje ">${mensaje.nombre}:</label> <time datetime="${hora}" class="fecha">${hora}</time></span>
+            <br>
+            <span class="mensaje">${mensaje.texto}
+        </div>`
     }
-
+    estructuraCanal += '</div>';
     estructuraCanal += `<div class="input-mensajes" >
     <nav>
         <form class="">
@@ -29,6 +26,7 @@ mostrarCanal = (indiceCanal) => {
         </form>
     </nav> 
     </div>`
+    console.log(estructuraCanal);
     contenidoCanal.innerHTML = estructuraCanal;
     bloquesMensajes = document.getElementById('bloques-mensajes-canal');
 
@@ -37,10 +35,7 @@ mostrarCanal = (indiceCanal) => {
     bloqueFormularioCanal.style.display = 'none';
     contenedorPantallaCanales.style.display = 'none';
     contenidoCanal.style.display = 'block';
-
-
 }
-
 
 salidaMensajeCanal = (indiceCanal) => {
     contenidoMensaje = document.getElementById('contenido-mensaje-canal');
@@ -50,9 +45,9 @@ salidaMensajeCanal = (indiceCanal) => {
     let estructuraMensaje = '';
     estructuraMensaje +=
         `<div class="bloque-mensaje-mio">
-                <label class="nombre-mensaje">Yo:</label>
+                <label class="nombre-mensaje">Yo:</label> <time datetime="${hora}" class="fecha">${hora} </time>
                 <br>
-                <span class="mensaje"> ${textoMensaje}<time datetime="${hora}" class="fecha">${hora} </time></span>
+                <span class="mensaje"> ${textoMensaje}</span>
         </div>`;
     bloquesMensajes.innerHTML += estructuraMensaje;
     contenidoMensaje.value = '';
@@ -64,7 +59,7 @@ salidaMensajeCanal = (indiceCanal) => {
         fecha: date,
     };
     canal.mensajes.push(mensaje);
-    
+
     localStorage.setItem('LISTA_CANALES', JSON.stringify(listaCanales));
 
     bloquesMensajes.scroll(0, 99999999);

@@ -94,6 +94,7 @@ body {
 
 .bloque-mensaje {
     text-align: initial;
+    margin-bottom: 1em;
     padding: 0.2em;
     border-radius: 0.7em;
     width: fit-content;
@@ -112,11 +113,6 @@ body {
 
 .nombre-mensaje {
     font-weight: 650;
-}
-
-.nombre-chat{
-    font-weight: 700;
-    font-family: sans-serif;
 }
 
 .crear-canal {
@@ -164,4 +160,16 @@ body {
     margin: 0.75em;
     color: cadetblue;
     text-shadow: 5px 3px 3px black;
+}
+
+.img-perfil{
+    max-width: 5em;
+    border-radius: 50%;
+}
+
+.nombre-chat{
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-top: 1.2em;
+    margin-left: 0.5em;
 }
