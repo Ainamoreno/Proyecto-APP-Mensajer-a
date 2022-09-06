@@ -187,3 +187,12 @@ body {
     margin-left: 0.5em;
     font-style: oblique;
 }
+
+.tit-pinicio {
+    font-family: fantasy;
+    font-size: 3.5em;
+}
+
+.subt-pinicio {
+    font-family: fantasy;
+}

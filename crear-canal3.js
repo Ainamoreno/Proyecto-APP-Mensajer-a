@@ -41,6 +41,19 @@ mostrarPantallaCanales = () => {
     contenedorPantallaCanales.style.display = 'block';
 }
 
+mostrarPantallaInicio = () => {
+
+    
+    mostrarPantallaCanales();
+    
+    buscadorChat.style.display = 'none';
+    bloqueFormularioCanal.style.display = 'none';
+    contenidoCanal.style.display = 'none';
+    contenedorContenidoChat.style.display = 'none';
+    contenedorPantallaCanales.style.display = 'none';
+    contenedorPantallaInicio.style.display = 'block'
+}
+
 
 mostrarCanalesSidebar();
-mostrarPantallaCanales();
+mostrarPantallaInicio();

@@ -1,3 +1,5 @@
+//Elemento pantalla inicio
+const contenedorPantallaInicio = document.getElementById('contenedor-pantalla-inicio');
 
 // Elementos chat canal
 let contenidoMensajeCanal;
