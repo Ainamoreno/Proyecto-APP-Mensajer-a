@@ -21,7 +21,7 @@ crearCanal = () => {
     nombreNuevoCanal.value = '';
     descripcionNuevoCanal.value = '';
 
-    localStorage.setItem('LISTA_CANALES', JSON.stringify(listaCanales));
+localStorage.setItem('LISTA_CANALES', JSON.stringify(listaCanales));
 
     mostrarCanalesSidebar()
 }

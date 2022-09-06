@@ -1,3 +1,4 @@
+
 // Elementos chat canal
 let contenidoMensajeCanal;
 let bloquesMensajesCanal;
