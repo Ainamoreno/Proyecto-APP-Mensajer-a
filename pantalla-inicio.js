@@ -6,11 +6,6 @@ mostrarPantallaCanales = () => {
 
         contenedorBtnsPantallaCanales.innerHTML += estructuraCanal;
     });
-    buscadorChat.style.display = 'none';
-    bloqueFormularioCanal.style.display = 'none';
-    contenidoCanal.style.display = 'none';
-    contenedorContenidoChat.style.display = 'none';
-    contenedorPantallaCanales.style.display = 'none';
 }
 
 mostrarPantallaChats = () => {
@@ -22,11 +17,6 @@ mostrarPantallaChats = () => {
         contenedorBtnsPantallaChats.innerHTML += estructuraChats;
     });
     
-    buscadorChat.style.display = 'none';
-    bloqueFormularioCanal.style.display = 'none';
-    contenidoCanal.style.display = 'none';
-    contenedorContenidoChat.style.display = 'none';
-    contenedorPantallaCanales.style.display = 'none';
 }
 
 mostrarPantallaInicio = () => {
@@ -41,3 +31,5 @@ mostrarPantallaInicio = () => {
     contenedorPantallaCanales.style.display = 'none';
     contenedorPantallaInicio.style.display = 'block'
 }
+
+mostrarPantallaInicio();

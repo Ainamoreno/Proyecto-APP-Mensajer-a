@@ -34,7 +34,7 @@ mostrarCanal = (indiceCanal) => {
     contenidoCanal.innerHTML = estructuraCanal;
     bloquesMensajes = document.getElementById('bloques-mensajes-canal');
 
-    contenedorPantallaInicio.style.display = 'none'
+    contenedorPantallaInicio.style.display = 'none';
     contenedorContenidoChat.style.display = 'none';
     buscadorChat.style.display = 'none';
     bloqueFormularioCanal.style.display = 'none';

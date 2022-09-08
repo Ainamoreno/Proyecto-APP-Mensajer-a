@@ -20,18 +20,27 @@
                         class="fa-solid fa-bars-staggered"></i></button>
             </div>
 
-            <button type="button" name="" id="btn" class="btn btn-dark"><i
-                    class="fas fa-archive"></i>&nbsp;Canales </button>
+            <div class="card card-sidebar">
+                <div>
+                    <i class="fas fa-archive"></i>&nbsp;Canales
+                </div>
+            </div> 
 
             <button class="btn btn-dark btn-añadir-canal" onclick="mostrarFormularioNuevoCanal()"><i
-                    class="fa-solid fa-plus"></i>
-            </button>
+                class="fa-solid fa-plus"></i>
+        </button>
 
             <!-- Contenedor canales sidebar -->
             <div id="contenedor-canales"></div>
 
+            <div class="card card-sidebar">
+                <div>
+                    <i class="fas fa-archive"></i>&nbsp;Mensajes directos
+                </div>
+            </div> 
+
             <button onclick="mostrarBuscadorChat()" type="button" id="btn" class="btn btn-dark"><i
-                    class="fas fa-comment"></i>&nbsp;Mensajes directos</button>
+                class="fa-solid fa-plus"></i></button>
 
 
             <!-- Contenedor mensajes directos -->
@@ -63,20 +72,20 @@
 
 
             <!-- Contenedor pantalla de inicio -->
-            <div id="contenedor-pantalla-inicio"> 
-                <h3 class="alert alert-info subt-pinicio" role="alert" >Bienvenidos a</h3>
-                <h1 class="alert alert-info tit-pinicio" role="alert" >Klug Messages</h1>
-                <div>Canales
+            <div id="contenedor-pantalla-inicio" >
+                <h3 class="alert alert-info" role="alert">Bienvenidos a</h3>
+                <h1 class="alert alert-info" role="alert">Klug Messages</h1>
+                <div >
+                    <h5>Canales</h5>
                     <hr>
                     <div id="contenedor-btns-pantalla-canales">
-                        Mostrar canales
                     </div>
                 </div>
                 <br>
-                <div>Mensajes directos
+                <div>
+                    <h5>Mensajes directos</h5>
                     <hr>
                     <div id="contenedor-btns-pantalla-chats">
-                        Mostrar mensajes
                     </div>
                 </div>
             </div>
@@ -98,7 +107,6 @@
 
             <!-- Contenedor lista canales -->
             <div id="contenedor-pantalla-canales">
-                <h2 class="titulo-canales">Canales</h2>
                 <div> </div>
             </div>
 

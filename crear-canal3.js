@@ -27,4 +27,3 @@ localStorage.setItem('LISTA_CANALES', JSON.stringify(listaCanales));
 }
 
 mostrarCanalesSidebar();
-mostrarPantallaInicio();

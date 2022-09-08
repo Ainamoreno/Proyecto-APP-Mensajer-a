@@ -20,7 +20,7 @@ mostrarChatMensajes = (indiceChat) => {
         <form class="">
             <div class="input-group">
                 <input type="text" id="contenido-mensaje-chat" class="form-control contenido-mensaje"
-                    placeholder="    Escriba su mensaje aquí">
+                    placeholder="    Escriba su mensaje aquí">
                 <button id="btn-enviar-mensaje" class="btn-enviar-mensaje input-group-text btn btn-dark"
                     type="button" onclick="salidaMensajeChat(${indiceChat})"><i class="fas fa-paper-plane"></i></button>
             </div>
@@ -32,7 +32,7 @@ mostrarChatMensajes = (indiceChat) => {
     contenedorContenidoChat.innerHTML = estructuraChatMensaje;
     bloquesMensajes = document.getElementById('bloques-mensajes-chat');
 
-    contenedorPantallaInicio.style.display = 'none'
+    contenedorPantallaInicio.style.display = 'none';
     buscadorChat.style.display = 'none';
     bloqueFormularioCanal.style.display = 'none';
     contenedorPantallaCanales.style.display = 'none';
