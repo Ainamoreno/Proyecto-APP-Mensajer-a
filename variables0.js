@@ -31,6 +31,9 @@ const contenedorMensajesDirectos = document.getElementById('contenedor-mensajes-
 const buscadorChat = document.getElementById('buscador-chat');
 const contenedorContenidoChat = document.getElementById('contenedor-contenido-chat');
 
+// Elementos buscador
+const inputBuscador = document.getElementById('input-buscador');
+const resultados = document.getElementById('contenedor-resultados-buscador');
 
 
 
