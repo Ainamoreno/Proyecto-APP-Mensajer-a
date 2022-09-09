@@ -34,6 +34,7 @@ mostrarCanal = (indiceCanal) => {
     contenidoCanal.innerHTML = estructuraCanal;
     bloquesMensajes = document.getElementById('bloques-mensajes-canal');
 
+    resultados.style.display = 'none';
     contenedorPantallaInicio.style.display = 'none';
     contenedorContenidoChat.style.display = 'none';
     buscadorChat.style.display = 'none';
@@ -46,11 +47,11 @@ salidaMensajeCanal = (indiceCanal) => {
     contenidoMensaje = document.getElementById('contenido-mensaje-canal');
     let textoMensaje = contenidoMensaje.value;
     let date = new Date();
-    let hora = `${mensaje.fecha.getDate()}-${mensaje.fecha.getMonth()}-${mensaje.fecha.getFullYear()} ${date.getHours()}:${addZero(date.getMinutes())}`;
+    let hora = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()} ${date.getHours()}:${addZero(date.getMinutes())}`;
     let estructuraMensaje = '';
     estructuraMensaje +=
         `<div class="bloque-mensaje-mio">
-                <label class="nombre-mensaje">Yo:</label> <time datetime="${hora}" class="fecha">${hora} </time>
+                <label class="nombre-mensaje">Yo:</label> <time datetime=" ${hora}" class="fecha">${hora} </time>
                 <br>
                 <span class="mensaje"> ${textoMensaje}</span>
         </div>`;

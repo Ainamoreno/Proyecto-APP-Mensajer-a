@@ -4,4 +4,5 @@ mostrarFormularioNuevoCanal = () => {
     contenedorPantallaCanales.style.display = 'none';
     buscadorChat.style.display = 'none';
     contenedorContenidoChat.style.display = 'none';
+    resultados.style.display = 'none';
 }

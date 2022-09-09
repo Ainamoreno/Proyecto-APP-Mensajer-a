@@ -9,12 +9,12 @@ obtenerDatosCanal = () => {
                     {
                         nombre: 'Jesús Rodríguez',
                         texto: 'Hola chicos, ¿qué tal los primeros días?',
-                        fecha: '',
+                        fecha: new Date(),
                     },
                     {
                         nombre: 'Maite Tamarit',
                         texto: 'Con muchas ganas y con ganas de aprender!!',
-                        fecha: new Date(2018, 11, 24),
+                        fecha: new Date(),
                     },
                     {
                         nombre: 'Marc Gómez',

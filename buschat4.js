@@ -5,4 +5,5 @@ mostrarBuscadorChat = () => {
     contenedorPantallaCanales.style.display = 'none';
     contenedorContenidoChat.style.display = 'none';
     contenedorPantallaInicio.style.display = 'none';
+    resultados.style.display = 'none';
 }

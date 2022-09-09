@@ -32,6 +32,7 @@ mostrarChatMensajes = (indiceChat) => {
     contenedorContenidoChat.innerHTML = estructuraChatMensaje;
     bloquesMensajes = document.getElementById('bloques-mensajes-chat');
 
+    resultados.style.display = 'none';
     contenedorPantallaInicio.style.display = 'none';
     buscadorChat.style.display = 'none';
     bloqueFormularioCanal.style.display = 'none';
