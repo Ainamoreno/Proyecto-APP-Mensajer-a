@@ -15,17 +15,6 @@ recogerFiltrado = () => {
         }
     });
 
-    listaChats.forEach(chat => {
-        if (chat.mensajes.find(mensaje => mensaje.texto.includes(contenidoInput))) {
-            estructuraBuscador += `<h2 class=" titulo-canal">Chat con: ${chat.nombre}</h2>`;
-            chat.mensajes.forEach(mensaje => {
-                if (mensaje.texto.includes(contenidoInput)) {
-                    estructuraBuscador += `<div class="texto-buscador"><b>${mensaje.nombre}</b> : ${mensaje.texto}</div>
-                    <hr>`;
-                }
-            })
-        }
-    });
 
     if(contenidoInput == '') {
         estructuraBuscador = ''
