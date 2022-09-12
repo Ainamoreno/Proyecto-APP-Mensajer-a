@@ -5,7 +5,7 @@ Es un proyecto realizado con **HTLM**, **CSS** y **Javascript**. Se trata de una
 La aplicación cuenta con un local storage con el fin de que al crear nuevos canales, y a pesar de actualizar la página se queden guardados.
 
 ### Aplicación
-![Visual](https://user-images.githubusercontent.com/110055279/189648510-3252b03e-f6b8-4360-8eb0-55340000eda9.png)
+![Visual](https://user-images.githubusercontent.com/110055279/189648510-3252b03e-f6b8-4360-8eb0-55340000eda9.png ) 
 
 
 ### Funcionalidades del proyecto
