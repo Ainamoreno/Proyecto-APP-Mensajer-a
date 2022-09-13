@@ -11,9 +11,13 @@
 
 Es un proyecto realizado con **HTLM**, **CSS** y **Javascript**. Se trata de una aplicación de mensajería en la que puedes encontrar diferentes canales y mensajes directos, también se puedes añadir canales extras.
 
-Se está utilizando Boostrap para crear una aplicación responsive ya que el sidebar desaparece (lo podemos mostrar con un icono que aparecerá en la esquina superior izquierda) cuando la dimensión disminuye y la pantalla se ajusta a ella. También se ha accedido a diferentes iconos de la web de Font Awesome.
+Se está utilizando Boostrap para crear una aplicación responsive ya que el sidebar desaparece (lo podemos mostrar con un icono que aparecerá en la esquina superior izquierda) cuando la dimensión disminuye, y la pantalla se ajusta a ella. También se ha accedido a diferentes iconos de la web de Font Awesome.
 
-La aplicación cuenta con un local storage con el fin de que al crear nuevos canales y de actualizar la página, se queden guardados.
+En la pantalla incial, que únicamente se mostrará cuando abramos la app, se puede observar un resumen de todos los canales y chats que están creados (igual que en el sidebar). En caso de crear alguno nuevo, éstos se irán actualizando.
+En los botones de '+' nos dirigimos a un formulario el cual añadiremos el nombre del canal o chat y seguidamente, se creará uno nuevo.
+En la esquina superior derecha hay un buscador el cual mostrará los resultados coincidientes con su búsqueda de todos los mensajes de los diferentes canales.
+
+La aplicación cuenta con un local storage con el fin de que al crear nuevos canales y actualizar la página, se queden guardados.
 
 <div id='id2' />
 
